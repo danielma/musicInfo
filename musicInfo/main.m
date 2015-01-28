@@ -2,8 +2,8 @@
 //  main.m
 //  musicInfo
 //
-//  Created by drailskid on 6/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Daniel Ma on 6/16/12.
+//  Copyright (c) 2012 Daniel Ma. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -41,8 +41,6 @@ int main(int argc, const char * argv[])
         
         for (runningApp in runningApplications)
         {
-            //	NSLog(@"Open App: %@", [aDictionary valueForKey:@"NSApplicationName"]);
-            
             currentAppName = [runningApp bundleIdentifier]; 
             
             if ([currentAppName isEqualToString:@"org.videolan.vlc"]) {
@@ -71,10 +69,6 @@ int main(int argc, const char * argv[])
             NSData *response = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&resp error:&err];
             NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
             NSRange range = NSMakeRange(0, [responseString length]);
-            
-//            NSLog(@"%@", responseString);
-            
-//            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@".+\"artist\":\"(.+)\".+\"album\":\"(.+)\".+\"title\":\"(.+)\"" options:NSRegularExpressionDotMatchesLineSeparators error:nil];
             NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@".+\"state\":\"(.+?)\"" options:NSRegularExpressionDotMatchesLineSeparators error:nil];
             NSArray *matches = [regex matchesInString:responseString options:NSRegularExpressionDotMatchesLineSeparators range:range];
             
@@ -114,12 +108,7 @@ int main(int argc, const char * argv[])
         
         [format replaceOccurrencesOfString:@"%t" withString:trackName options:0 range:NSMakeRange(0, [format length])];
         [format replaceOccurrencesOfString:@"%a" withString:trackArtist options:0 range:NSMakeRange(0, [format length])];
-        [format replaceOccurrencesOfString:@"%A" withString:trackAlbum options:0 range:NSMakeRange(0, [format length])];            
-        
-//        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@".+\"artist\":\"(.+?)\"" options:NSRegularExpressionDotMatchesLineSeparators error:nil];
-//        NSArray *matches = [regex matchesInString:format options:NSRegularExpressionDotMatchesLineSeparators range:NSMakeRange(0, [format length])];
-        
-//        NSString *truncatedFormat = [format substringWithRange:[[matches objectAtIndex:0] rangeAtIndex:1]];
+        [format replaceOccurrencesOfString:@"%A" withString:trackAlbum options:0 range:NSMakeRange(0, [format length])];
     
         if (uppercase) {
             printf("%s\n", [[format uppercaseString] UTF8String]);
