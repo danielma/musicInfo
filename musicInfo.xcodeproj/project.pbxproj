@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70BA345215DE8C8F00775291 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA345115DE8C8F00775291 /* Cocoa.framework */; };
+		70EECB64158C7A910072867C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EECB63158C7A910072867C /* main.m */; };
+		70EECB68158C7A910072867C /* musicInfo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70EECB67158C7A910072867C /* musicInfo.1 */; };
+		70EECB73158C7C130072867C /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EECB71158C7C040072867C /* ScriptingBridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70EECB5A158C7A910072867C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				70EECB68158C7A910072867C /* musicInfo.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		70BA345115DE8C8F00775291 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		70EECB5C158C7A910072867C /* musicInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = musicInfo; sourceTree = BUILT_PRODUCTS_DIR; };
+		70EECB60158C7A910072867C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70EECB63158C7A910072867C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70EECB66158C7A910072867C /* musicInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musicInfo-Prefix.pch"; sourceTree = "<group>"; };
+		70EECB67158C7A910072867C /* musicInfo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = musicInfo.1; sourceTree = "<group>"; };
+		70EECB6E158C7B1E0072867C /* iTunes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		70EECB6F158C7B6B0072867C /* Grooveshark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grooveshark.h; sourceTree = "<group>"; };
+		70EECB70158C7B6B0072867C /* Spotify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
+		70EECB71158C7C040072867C /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70EECB59158C7A910072867C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BA345215DE8C8F00775291 /* Cocoa.framework in Frameworks */,
+				70EECB73158C7C130072867C /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70EECB51158C7A8F0072867C = {
+			isa = PBXGroup;
+			children = (
+				70BA345115DE8C8F00775291 /* Cocoa.framework */,
+				70EECB62158C7A910072867C /* musicInfo */,
+				70EECB5F158C7A910072867C /* Frameworks */,
+				70EECB5D158C7A910072867C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70EECB5D158C7A910072867C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EECB5C158C7A910072867C /* musicInfo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70EECB5F158C7A910072867C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70EECB71158C7C040072867C /* ScriptingBridge.framework */,
+				70EECB60158C7A910072867C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70EECB62158C7A910072867C /* musicInfo */ = {
+			isa = PBXGroup;
+			children = (
+				70EECB63158C7A910072867C /* main.m */,
+				70EECB67158C7A910072867C /* musicInfo.1 */,
+				70EECB65158C7A910072867C /* Supporting Files */,
+			);
+			path = musicInfo;
+			sourceTree = "<group>";
+		};
+		70EECB65158C7A910072867C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70EECB6F158C7B6B0072867C /* Grooveshark.h */,
+				70EECB70158C7B6B0072867C /* Spotify.h */,
+				70EECB6E158C7B1E0072867C /* iTunes.h */,
+				70EECB66158C7A910072867C /* musicInfo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70EECB5B158C7A910072867C /* musicInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70EECB6B158C7A910072867C /* Build configuration list for PBXNativeTarget "musicInfo" */;
+			buildPhases = (
+				70EECB58158C7A910072867C /* Sources */,
+				70EECB59158C7A910072867C /* Frameworks */,
+				70EECB5A158C7A910072867C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = musicInfo;
+			productName = musicInfo;
+			productReference = 70EECB5C158C7A910072867C /* musicInfo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70EECB53158C7A8F0072867C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 70EECB56158C7A8F0072867C /* Build configuration list for PBXProject "musicInfo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70EECB51158C7A8F0072867C;
+			productRefGroup = 70EECB5D158C7A910072867C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70EECB5B158C7A910072867C /* musicInfo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70EECB58158C7A910072867C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EECB64158C7A910072867C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70EECB69158C7A910072867C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70EECB6A158C7A910072867C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70EECB6C158C7A910072867C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "musicInfo/musicInfo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70EECB6D158C7A910072867C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "musicInfo/musicInfo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70EECB56158C7A8F0072867C /* Build configuration list for PBXProject "musicInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EECB69158C7A910072867C /* Debug */,
+				70EECB6A158C7A910072867C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70EECB6B158C7A910072867C /* Build configuration list for PBXNativeTarget "musicInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EECB6C158C7A910072867C /* Debug */,
+				70EECB6D158C7A910072867C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70EECB53158C7A8F0072867C /* Project object */;
+}
