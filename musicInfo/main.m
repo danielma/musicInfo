@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "iTunes.h"
 #import "Spotify.h"
-#import "Grooveshark.h"
 
 int main(int argc, const char * argv[])
 {
@@ -34,7 +33,6 @@ int main(int argc, const char * argv[])
         iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
         SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
         Boolean vlcRunning = NO;
-        Boolean groovesharkRunning = NO;
         
         NSWorkspace *ws = [NSWorkspace sharedWorkspace];
         NSArray *runningApplications = [ws runningApplications];
@@ -49,22 +47,10 @@ int main(int argc, const char * argv[])
             
             if ([currentAppName isEqualToString:@"org.videolan.vlc"]) {
                 vlcRunning = YES;
-            } else if ([currentAppName isEqualToString:@"com.fluidapp.FluidInstance.Grooveshark"]) {
-                groovesharkRunning = YES;
             }
         }
         
-        if (groovesharkRunning) {
-            GroovesharkApplication *grooveshark = [SBApplication applicationWithBundleIdentifier:@"com.fluidapp.FluidInstance.Grooveshark"];
-            //            we'll do our stuff here
-            NSString *windowName = [[[grooveshark windows] objectAtIndex:0] name];
-            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^Playing:\\s(.+?)\\s\\|\\s(.+?)\\s\\|\\s(.+)" options:0 error:nil];
-            NSArray *matches = [regex matchesInString:windowName options:0 range:NSMakeRange(0, [windowName length])];
-            
-            trackName = [windowName substringWithRange:[[matches objectAtIndex:0] rangeAtIndex:1]];
-            trackArtist = [windowName substringWithRange:[[matches objectAtIndex:0] rangeAtIndex:2]];
-            trackAlbum = [windowName substringWithRange:[[matches objectAtIndex:0] rangeAtIndex:3]];            
-        } else if ([iTunes isRunning]) {
+        if ([iTunes isRunning]) {
             iTunesTrack *currentTrack = [iTunes currentTrack];
             
             trackName = [currentTrack name];

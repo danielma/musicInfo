@@ -34,7 +34,6 @@
 		70EECB66158C7A910072867C /* musicInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musicInfo-Prefix.pch"; sourceTree = "<group>"; };
 		70EECB67158C7A910072867C /* musicInfo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = musicInfo.1; sourceTree = "<group>"; };
 		70EECB6E158C7B1E0072867C /* iTunes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
-		70EECB6F158C7B6B0072867C /* Grooveshark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grooveshark.h; sourceTree = "<group>"; };
 		70EECB70158C7B6B0072867C /* Spotify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 		70EECB71158C7C040072867C /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -92,7 +91,6 @@
 		70EECB65158C7A910072867C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				70EECB6F158C7B6B0072867C /* Grooveshark.h */,
 				70EECB70158C7B6B0072867C /* Spotify.h */,
 				70EECB6E158C7B1E0072867C /* iTunes.h */,
 				70EECB66158C7A910072867C /* musicInfo-Prefix.pch */,
